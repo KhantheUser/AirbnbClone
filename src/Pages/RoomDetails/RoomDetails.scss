@@ -1,0 +1,12 @@
+.roomDetails {
+    .slick-dots{
+        left:-15% !important;
+        li{
+            button{
+                &::before{
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

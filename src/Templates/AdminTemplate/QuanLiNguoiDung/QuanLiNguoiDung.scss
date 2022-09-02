@@ -1,0 +1,19 @@
+.quanliuser{
+    .ant-table-cell{
+        border : 1px solid #ff385c ;
+    };
+    .ant-input-affix-wrapper{
+        &:hover{
+            border : 1px solid #ff385c
+        };
+        &:focus{
+            border: 1px solid #ff385c !important;
+            box-shadow: 0 0 2px 2px #ca66787d;
+        }
+        
+    }
+    .ant-input-search-button{
+        background-color: #ff385c !important;
+        border : 1px solid #ff385c;
+    }
+}

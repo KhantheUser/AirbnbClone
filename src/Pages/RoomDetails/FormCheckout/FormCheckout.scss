@@ -1,0 +1,17 @@
+.ant-btn.ant-btn-default{
+    border: 1px solid #ff385c;
+    color: #ff385c;
+    &:hover{
+    border: 1px solid #ff385c;
+    background-color: #ff385c;
+    color: white;
+    }
+}
+.ant-btn.ant-btn-primary{
+    border: 1px solid #ff385c;
+    background-color: #ff385c;
+    &:hover{
+        background-color: #e2415f;
+        border: 1px solid #ff385c;
+    }
+}

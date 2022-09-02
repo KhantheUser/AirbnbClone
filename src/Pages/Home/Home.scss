@@ -1,0 +1,25 @@
+
+
+
+ .carousel-icon {
+     display: flex !important;
+ }
+ .carousel-icon-dad{
+.slick-dots {
+        display: none !important;
+    };
+    .slick-arrow.slick-prev{
+        
+            &::before{
+                color:#ad9494 !important;
+            }
+        
+    }
+         .slick-arrow.slick-next {
+    
+             &::before {
+                 color: #ad9494 !important;
+             }
+    
+         }
+ }

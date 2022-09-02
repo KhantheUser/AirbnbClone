@@ -1,0 +1,33 @@
+.admin{
+    height:100vh;
+    .tab-admin{
+        color : #bdbdc7;
+        padding : 13px 20px;
+        cursor: pointer;
+        transition: all linear 0.4s;
+        &:hover {
+            background-color: #355c7d;
+        }
+    }
+    .ant-menu-root{
+        .ant-menu-submenu{
+            color : #bdbdc7 !important;
+            .ant-menu-sub{
+                // background-color: #343957 !important;
+            }
+        }
+        .ant-menu-submenu-title{
+            &:hover{
+
+            color: #bdbdc7 !important;
+            }
+        }
+        background-color: #343957 !important;
+        font-size: 20px;
+        
+        .ant-menu-submenu-arrow{
+        color: #bdbdc7 !important;
+        }
+    }
+    
+}
