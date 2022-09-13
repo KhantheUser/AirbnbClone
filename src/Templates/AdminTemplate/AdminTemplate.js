@@ -6,14 +6,14 @@ import { IoMdArrowDropdown } from 'react-icons/io'
 import { MdOutlineKeyboardArrowRight,MdShareLocation } from 'react-icons/md'
 import { useDispatch ,useSelector} from 'react-redux'
 import { Button, Dropdown, Menu } from 'antd';
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 
 
 import './AdminTemplate.scss'
 
 import { Outlet } from 'react-router-dom'
-import { USER_LOGIN } from '../../Util/config'
+import { TOKEN, USER_LOGIN } from '../../Util/config'
 import { AiOutlineUser } from 'react-icons/ai'
  const getItem =(label, key, icon, children, type)=> {
   return {
@@ -73,7 +73,12 @@ export default function AdminTemplate() {
       {
         key: '2',
         label: (
-           <div className="flex items-center text-base p-2">
+           <div onClick={()=>{
+             localStorage.removeItem(USER_LOGIN);
+            localStorage.removeItem(TOKEN)
+            navigate('/')
+            window.location.reload()
+           }} className="flex items-center text-base p-2">
                 <span>Đăng xuất</span>
                
             </div>
@@ -100,9 +105,11 @@ const items = [
   ]),
 ];
 const navigate = useNavigate()
+const userRole = JSON.parse(localStorage.getItem(USER_LOGIN)).user.type
 
-  return (
- <div className='grid grid-cols-12 admin '>
+ 
+    return (
+       <div className='grid grid-cols-12 admin '>
    
             <div className="col-span-2  " >
                 <div style={{backgroundColor:'#343957',height:'100%'}}  >
@@ -158,7 +165,8 @@ const navigate = useNavigate()
             </div>
         
     </div> 
-  )
+    )
+ 
 }
 
 

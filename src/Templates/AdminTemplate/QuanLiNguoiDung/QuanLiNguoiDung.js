@@ -43,7 +43,7 @@ const data = userList
     dataIndex: 'name',
    
 
-    width:'20%',
+    width:'15%',
     render : (text,name)=>{
         return <span>{text}</span>
     },

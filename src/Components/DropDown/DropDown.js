@@ -12,6 +12,7 @@ import { MdOutlineFlightTakeoff } from 'react-icons/md';
 import { AiOutlineClose, AiOutlineHistory, AiOutlineUser } from 'react-icons/ai';
 export default function DropDown() {
   const {userLogin} = useSelector((state)=>state.user)
+const userRole = JSON.parse(localStorage.getItem(USER_LOGIN))?.user.type
   
     const navigate = useNavigate()
     const [isHidden,setIsHidden] = useState(true) 
@@ -51,7 +52,14 @@ export default function DropDown() {
       {
         key :'3',
         label : (
-          <p onClick={()=>navigate('admin')} className="text-base   m-0 py-1" >
+          <p onClick={()=>{
+            if(userRole === 'ADMIN'){
+              navigate('/admin');
+            }else{
+              navigate('/')
+              alert('Bạn không có quyền truy cập')
+            }
+          }} className="text-base   m-0 py-1" >
                 Đi đến trang quản trị
             </p>
         )
